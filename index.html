@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>タロウとYouごはん｜コンセプトシート v2.0</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,800;1,9..144,300;1,9..144,400&family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+		<style>
+			:root{
+				--paper:#F2EDE0;
+				--paper-deep:#EAE2D0;
+				--paper-deeper:#E1D7BF;
+				--ink:#1A1611;
+				--ink-soft:#3A332A;
+				--muted:#8A7E6A;
+				--rule:#1A1611;
+				--rule-soft:#C9BEA6;
+				--flame:#C04A1F;
+				--flame-deep:#8E3414;
+				--gold:#B58A3F;
+				--maxw:1200px;
+			}
+			*{box-sizing:border-box;margin:0;padding:0}
+				html,body{background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-weight:400;line-height:1.7;-webkit-font-smoothing:antialiased;font-feature-settings:"palt"}
+					body{
+						background-image:
+							radial-gradient(circle at 20% 8%, rgba(192,74,31,.06), transparent 40%),
+							radial-gradient(circle at 92% 78%, rgba(181,138,63,.07), transparent 45%),
+							url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.10 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+						background-attachment:fixed;
+					}
+					.sheet{max-width:var(--maxw);margin:0 auto;padding:64px 56px 96px;position:relative}
+						
+						/* ─── Top bar ─── */
+						.topbar{display:flex;justify-content:space-between;align-items:center;font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);padding-bottom:18px;border-bottom:1px solid var(--ink)}
+							.topbar .left{display:flex;gap:18px;align-items:center}
+								.topbar .dot{width:7px;height:7px;background:var(--flame);border-radius:50%;display:inline-block}
+									.topbar .right{display:flex;gap:24px}
+										
+										/* ─── Hero ─── */
+										.hero{padding:60px 0 48px;border-bottom:1px solid var(--ink);position:relative}
+											.hero .kicker{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.3em;color:var(--flame);text-transform:uppercase;margin-bottom:28px}
+												.hero h1{
+													font-family:"Shippori Mincho",serif;
+													font-weight:700;
+													font-size:clamp(44px,7.2vw,104px);
+													line-height:.98;
+													letter-spacing:-.01em;
+													margin-bottom:20px;
+												}
+												.hero h1 .x{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(--flame);font-size:.85em;padding:0 .04em;display:inline-block;transform:translateY(-.04em)}
+													.hero .subtitle-en{font-family:"Fraunces",serif;font-weight:300;font-style:italic;font-size:clamp(17px,1.9vw,24px);color:var(--ink-soft);letter-spacing:.01em;margin-bottom:48px;max-width:780px}
+														
+														/* Channel soul / statement */
+														.soul{
+															display:grid;grid-template-columns:140px 1fr;gap:48px;align-items:start;
+															padding:36px 0 8px;
+														}
+														.soul .label{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;padding-top:8px;border-top:2px solid var(--ink)}
+															.soul .body{
+																font-family:"Shippori Mincho",serif;font-weight:500;
+																font-size:clamp(20px,2.2vw,30px);line-height:1.55;letter-spacing:.01em;
+															}
+															.soul .body .em{color:var(--flame);font-family:"Fraunces",serif;font-style:italic;font-weight:400;font-size:.96em}
+																.soul .body .ja-em{color:var(--flame)}
+																	
+																	/* Tagline candidate pool */
+																	.taglines{margin-top:44px;padding-top:32px;border-top:1px dashed var(--rule-soft)}
+																		.taglines .label{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;margin-bottom:18px}
+																			.taglines ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 36px}
+																				.taglines li{
+																					font-family:"Shippori Mincho",serif;font-weight:500;font-size:16px;line-height:1.7;
+																					color:var(--ink-soft);padding:8px 0;display:flex;align-items:baseline;gap:14px;
+																					border-bottom:1px dashed var(--rule-soft);
+																				}
+																				.taglines li:last-child,.taglines li:nth-last-child(2){border-bottom:none}
+																					.taglines li .num{font-family:"DM Mono",monospace;font-size:10px;color:var(--flame);letter-spacing:.1em;flex-shrink:0;width:20px}
+																						.taglines li.lead{color:var(--ink);font-weight:600}
+																							.taglines li.lead::after{content:"★ 第一候補";font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.2em;color:var(--flame);margin-left:auto;flex-shrink:0;align-self:center}
+																								.taglines li.en{font-family:"Fraunces",serif;font-style:italic;font-weight:400}
+																									
+																									/* ─── Section heading ─── */
+																									.section{padding:64px 0;border-bottom:1px solid var(--rule-soft);position:relative}
+																										.section-head{display:grid;grid-template-columns:120px 1fr;gap:48px;align-items:baseline;margin-bottom:40px}
+																											.section-num{font-family:"Fraunces",serif;font-weight:300;font-size:64px;color:var(--flame);line-height:1;font-feature-settings:"lnum"}
+																												.section-title{font-family:"Shippori Mincho",serif;font-weight:700;font-size:32px;letter-spacing:.02em;line-height:1.3}
+																													.section-title .en{display:block;font-family:"Fraunces",serif;font-weight:300;font-style:italic;font-size:15px;color:var(--muted);letter-spacing:.06em;margin-top:6px}
+																														
+																														/* ─── 01 Redefinition ─── */
+																														.redef{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+																															.redef .negation{padding:32px;border:2px solid var(--ink);position:relative;background:var(--paper-deep)}
+																																.redef .negation::before{
+																																	content:"NOT THIS";font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;
+																																	color:var(--paper);background:var(--ink);padding:5px 12px;
+																																	position:absolute;top:-12px;left:24px;
+																																}
+																																.redef .negation h3{
+																																	font-family:"Shippori Mincho",serif;font-weight:600;font-size:22px;line-height:1.5;
+																																	color:var(--muted);text-decoration:line-through;text-decoration-color:var(--flame);
+																																	text-decoration-thickness:1.5px;margin-bottom:14px;
+																																}
+																																.redef .negation p{font-size:14px;color:var(--ink-soft);line-height:1.85}
+																																	.redef .affirmation{padding:32px;border:2px solid var(--flame);position:relative;background:rgba(192,74,31,.05)}
+																																		.redef .affirmation::before{
+																																			content:"BUT THIS";font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;
+																																			color:var(--paper);background:var(--flame);padding:5px 12px;
+																																			position:absolute;top:-12px;left:24px;
+																																		}
+																																		.redef .affirmation h3{
+																																			font-family:"Shippori Mincho",serif;font-weight:700;font-size:22px;line-height:1.5;
+																																			color:var(--ink);margin-bottom:14px;
+																																		}
+																																		.redef .affirmation p{font-size:14.5px;color:var(--ink-soft);line-height:1.9}
+																																			.redef .affirmation .em{color:var(--flame);font-weight:600}
+																																				
+																																				.redef-pull{
+																																					margin-top:40px;padding:36px 40px;background:var(--ink);color:var(--paper);position:relative;
+																																					font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(20px,2.2vw,28px);
+																																					line-height:1.5;text-align:center;letter-spacing:.02em;
+																																				}
+																																				.redef-pull::before,.redef-pull::after{
+																																					content:"";position:absolute;width:18px;height:18px;
+																																				}
+																																				.redef-pull::before{top:-1px;left:-1px;border-top:3px solid var(--flame);border-left:3px solid var(--flame)}
+																																					.redef-pull::after{bottom:-1px;right:-1px;border-bottom:3px solid var(--flame);border-right:3px solid var(--flame)}
+																																						.redef-pull .em{color:var(--flame);font-family:"Fraunces",serif;font-style:italic;font-weight:400}
+																																							
+																																							/* ─── 02 Worldview / song ─── */
+																																							.worldview{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
+																																								.principles{display:flex;flex-direction:column;gap:28px}
+																																									.principle{padding-left:20px;border-left:2px solid var(--flame);position:relative}
+																																										.principle h4{font-family:"Shippori Mincho",serif;font-weight:600;font-size:19px;margin-bottom:8px;letter-spacing:.02em}
+																																											.principle p{font-size:14.5px;color:var(--ink-soft);line-height:1.85}
+																																												.song{
+																																													background:var(--paper-deep);padding:36px 36px 32px;border:1px solid var(--ink);position:relative;
+																																												}
+																																												.song::before{content:"";position:absolute;top:-1px;left:-1px;width:24px;height:24px;border-top:3px solid var(--flame);border-left:3px solid var(--flame)}
+																																													.song::after{content:"";position:absolute;bottom:-1px;right:-1px;width:24px;height:24px;border-bottom:3px solid var(--flame);border-right:3px solid var(--flame)}
+																																														.song .label{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--flame);margin-bottom:18px;text-transform:uppercase}
+																																															.song .ja{font-family:"Shippori Mincho",serif;font-weight:500;font-size:16.5px;line-height:2.2;letter-spacing:.04em;margin-bottom:20px}
+																																																.song .en{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:14px;line-height:1.85;color:var(--ink-soft);padding-top:18px;border-top:1px dashed var(--rule-soft)}
+																																																	
+																																																	/* ─── 03 Golden Route ─── */
+																																																	.route{position:relative}
+																																																		.route-line{position:absolute;top:42px;left:24px;right:24px;height:2px;background:var(--ink);z-index:0}
+																																																			.route-line::before,.route-line::after{
+																																																				content:"";position:absolute;top:-3px;width:8px;height:8px;background:var(--flame);border-radius:50%;
+																																																			}
+																																																			.route-line::before{left:0}
+																																																				.route-line::after{right:0}
+																																																					.route-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;position:relative;z-index:1}
+																																																						.step{position:relative}
+																																																							.step .pin{
+																																																								width:18px;height:18px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);
+																																																								margin:34px auto 22px;position:relative;
+																																																							}
+																																																							.step:nth-child(3) .pin,.step:nth-child(7) .pin{
+																																																								background:var(--flame);border-color:var(--flame);box-shadow:0 0 0 6px rgba(192,74,31,.15)
+																																																								}
+																																																								.step .num{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.2em;color:var(--muted);text-align:center;margin-bottom:6px}
+																																																									.step h4{font-family:"Shippori Mincho",serif;font-weight:700;font-size:15px;text-align:center;margin-bottom:6px;letter-spacing:.02em;line-height:1.4}
+																																																										.step .en{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:11px;color:var(--flame);text-align:center;letter-spacing:.04em}
+																																																											
+																																																											.route-stages{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+																																																												.route-stage{
+																																																													padding:24px 22px;border:1px solid var(--ink);border-right:none;background:var(--paper-deep);
+																																																												}
+																																																												.route-stage:last-child{border-right:1px solid var(--ink)}
+																																																													.route-stage .num{font-family:"Fraunces",serif;font-weight:300;font-style:italic;font-size:28px;color:var(--flame);line-height:1;margin-bottom:12px}
+																																																														.route-stage h5{font-family:"Shippori Mincho",serif;font-weight:700;font-size:16px;margin-bottom:8px;letter-spacing:.02em}
+																																																															.route-stage p{font-size:13px;color:var(--ink-soft);line-height:1.8}
+																																																																
+																																																																/* ─── 04 Three Pillars ─── */
+																																																																.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:36px}
+																																																																	.pillar{
+																																																																		background:var(--paper-deep);padding:32px 28px;border:1px solid var(--ink);position:relative;
+																																																																		display:flex;flex-direction:column;
+																																																																	}
+																																																																	.pillar .pillar-num{
+																																																																		font-family:"Fraunces",serif;font-style:italic;font-weight:300;
+																																																																		position:absolute;top:18px;right:24px;font-size:38px;color:var(--flame);line-height:1;
+																																																																	}
+																																																																	.pillar .pillar-label{
+																																																																		font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--flame);
+																																																																		text-transform:uppercase;margin-bottom:14px;
+																																																																	}
+																																																																	.pillar h4{font-family:"Shippori Mincho",serif;font-weight:700;font-size:24px;margin-bottom:10px;letter-spacing:.02em;line-height:1.4}
+																																																																		.pillar h4 .en{display:block;font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:14px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+																																																																			.pillar .pillar-thesis{
+																																																																				font-family:"Shippori Mincho",serif;font-weight:500;font-size:15.5px;line-height:1.85;
+																																																																				padding:14px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:14px 0 18px;
+																																																																			}
+																																																																			.pillar .pillar-thesis em{color:var(--flame);font-style:normal;font-weight:700}
+																																																																				.pillar .pillar-body{font-size:13.5px;color:var(--ink-soft);line-height:1.85;flex:1}
+																																																																					.pillar .pillar-body strong{color:var(--ink);font-weight:600}
+																																																																						
+																																																																						/* tag cloud for "日本体験" examples */
+																																																																						.experience-tags{margin-top:36px;padding:28px 32px;background:var(--ink);color:var(--paper)}
+																																																																							.experience-tags .label{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+																																																																								.experience-tags .tags{display:flex;flex-wrap:wrap;gap:8px}
+																																																																									.experience-tags .tag{
+																																																																										font-family:"Shippori Mincho",serif;font-weight:500;font-size:14px;
+																																																																										padding:8px 16px;border:1px solid #4A4138;color:#D8CFB9;letter-spacing:.04em;
+																																																																									}
+																																																																									.experience-tags .tag.flame{color:var(--paper);border-color:var(--flame);background:rgba(192,74,31,.18)}
+																																																																										
+																																																																										/* ─── 05 Three-column rules ─── */
+																																																																										.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+																																																																											.card{background:var(--paper-deep);padding:28px 26px;border:1px solid var(--ink);position:relative}
+																																																																												.card .num{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:32px;color:var(--flame);position:absolute;top:14px;right:20px;line-height:1}
+																																																																													.card h4{font-family:"Shippori Mincho",serif;font-weight:700;font-size:18px;margin-bottom:6px;letter-spacing:.02em}
+																																																																														.card .en-h4{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:13px;color:var(--muted);margin-bottom:18px;letter-spacing:.04em}
+																																																																															.card ul{list-style:none}
+																																																																																.card ul li{font-size:14px;line-height:1.85;padding:7px 0 7px 18px;position:relative;color:var(--ink-soft);border-bottom:1px dashed var(--rule-soft)}
+																																																																																	.card ul li:last-child{border-bottom:none}
+																																																																																		.card ul li::before{content:"→";position:absolute;left:0;color:var(--flame);font-weight:600;font-family:"DM Mono",monospace;font-size:13px}
+																																																																																			.card.flame{background:var(--ink);color:var(--paper)}
+																																																																																				.card.flame h4,.card.flame .en-h4{color:var(--paper)}
+																																																																																					.card.flame .en-h4{color:#C9BEA6}
+																																																																																						.card.flame ul li{color:#D8CFB9;border-bottom:1px dashed #4A4138}
+																																																																																							.card.flame ul li::before{color:var(--gold)}
+																																																																																								.card.flame .num{color:var(--flame)}
+																																																																																									
+																																																																																									/* ─── 06 Doctrine ─── */
+																																																																																									.doctrine{display:grid;grid-template-columns:.7fr 1.3fr;gap:64px;align-items:start}
+																																																																																										.doctrine .pull{
+																																																																																											font-family:"Shippori Mincho",serif;font-weight:600;font-size:32px;line-height:1.4;letter-spacing:.01em;
+																																																																																											padding:32px 0 32px 36px;border-left:3px solid var(--flame);color:var(--ink);
+																																																																																										}
+																																																																																										.doctrine .pull .em{color:var(--flame)}
+																																																																																											.doctrine .body p{font-size:15px;line-height:1.95;color:var(--ink-soft);margin-bottom:18px}
+																																																																																												.doctrine .body p strong{color:var(--ink);font-weight:700}
+																																																																																													.doctrine .body .note{
+																																																																																														margin-top:12px;padding:18px 22px;background:rgba(192,74,31,.08);border-left:3px solid var(--flame);
+																																																																																														font-family:"Shippori Mincho",serif;font-size:14.5px;line-height:1.8;color:var(--ink);
+																																																																																													}
+																																																																																													
+																																																																																													/* keywords sub-block */
+																																																																																													.keywords{margin-top:36px;padding:28px 32px;background:var(--paper-deep);border:1px solid var(--ink)}
+																																																																																														.keywords .label{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--flame);text-transform:uppercase;margin-bottom:14px}
+																																																																																															.keywords .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+																																																																																																.keywords .kw h5{font-family:"Shippori Mincho",serif;font-weight:700;font-size:17px;margin-bottom:6px;color:var(--ink)}
+																																																																																																	.keywords .kw h5 .en{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:13px;color:var(--flame);margin-left:6px}
+																																																																																																		.keywords .kw p{font-size:13px;color:var(--ink-soft);line-height:1.8}
+																																																																																																			
+																																																																																																			/* ─── 07 Emotional design / 余韻 ─── */
+																																																																																																			.afterglow{
+																																																																																																				background:var(--ink);color:var(--paper);padding:48px 48px 44px;position:relative;
+																																																																																																			}
+																																																																																																			.afterglow .pre-label{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+																																																																																																				.afterglow .lead{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(22px,2.6vw,32px);line-height:1.55;margin-bottom:32px;max-width:820px}
+																																																																																																					.afterglow .lead em{color:var(--flame);font-style:normal;font-weight:700}
+																																																																																																						.afterglow .feels{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 32px;margin-top:8px}
+																																																																																																							.afterglow .feel{
+																																																																																																								font-family:"Shippori Mincho",serif;font-weight:500;font-size:18px;line-height:1.7;letter-spacing:.02em;
+																																																																																																								padding:14px 0;border-bottom:1px solid #4A4138;display:flex;align-items:baseline;gap:14px;
+																																																																																																							}
+																																																																																																							.afterglow .feel:nth-last-child(1),.afterglow .feel:nth-last-child(2){border-bottom:none}
+																																																																																																								.afterglow .feel .quote{color:var(--flame);font-family:"Fraunces",serif;font-style:italic;font-weight:400;font-size:22px;flex-shrink:0}
+																																																																																																									
+																																																																																																									/* ─── 08 USP ─── */
+																																																																																																									.usp-table{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--ink)}
+																																																																																																										.usp-row{display:contents}
+																																																																																																											.usp-cell{padding:18px 22px;border-bottom:1px solid var(--rule-soft);background:var(--paper)}
+																																																																																																												.usp-cell.head{background:var(--ink);color:var(--paper);font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;border-bottom:none;padding:14px 22px}
+																																																																																																													.usp-cell.head.us{background:var(--flame)}
+																																																																																																														.usp-cell.dim{background:var(--paper-deeper);font-size:14px;color:var(--ink-soft);line-height:1.7}
+																																																																																																															.usp-cell.them{font-size:14px;color:var(--muted);line-height:1.7}
+																																																																																																																.usp-cell.us{font-size:14px;color:var(--ink);line-height:1.75;background:rgba(192,74,31,.06)}
+																																																																																																																	.usp-cell.us strong{color:var(--flame);font-weight:700}
+																																																																																																																		.usp-cell.cat{font-family:"Shippori Mincho",serif;font-weight:700;font-size:15px;color:var(--ink)}
+																																																																																																																			.usp-row:last-child .usp-cell{border-bottom:none}
+																																																																																																																				
+																																																																																																																				/* ─── Closing ─── */
+																																																																																																																				.closing{
+																																																																																																																					margin-top:64px;padding:72px 0 40px;text-align:center;border-top:1px solid var(--ink);
+																																																																																																																					background-image:radial-gradient(ellipse at center top, rgba(192,74,31,.10), transparent 60%);
+																																																																																																																				}
+																																																																																																																				.closing .label{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.4em;color:var(--flame);text-transform:uppercase;margin-bottom:20px}
+																																																																																																																					.closing .en-line{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(28px,4vw,52px);line-height:1.25;color:var(--ink);margin-bottom:14px;letter-spacing:.005em}
+																																																																																																																						.closing .ja-line{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(16px,1.6vw,21px);color:var(--ink-soft);letter-spacing:.06em}
+																																																																																																																							.closing .signoff{margin-top:48px;font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
+																																																																																																																								
+																																																																																																																								/* ─── Crossing motif ─── */
+																																																																																																																								.crossing{position:absolute;top:24px;right:56px;width:80px;height:80px;opacity:.85;pointer-events:none}
+																																																																																																																									.crossing line{stroke:var(--ink);stroke-width:1}
+																																																																																																																										.crossing .accent{stroke:var(--flame);stroke-width:1.5}
+																																																																																																																											.crossing circle{fill:var(--flame)}
+																																																																																																																												
+																																																																																																																												/* ─── Responsive ─── */
+																																																																																																																												@media (max-width:900px){
+																																																																																																																													.sheet{padding:32px 24px 64px}
+																																																																																																																														.soul{grid-template-columns:1fr;gap:24px}
+																																																																																																																															.taglines ul{grid-template-columns:1fr}
+																																																																																																																																.redef{grid-template-columns:1fr;gap:32px}
+																																																																																																																																	.worldview{grid-template-columns:1fr;gap:36px}
+																																																																																																																																		.route-grid{grid-template-columns:repeat(7,1fr);gap:8px}
+																																																																																																																																			.route-line{display:none}
+																																																																																																																																				.route-stages{grid-template-columns:1fr;gap:0}
+																																																																																																																																					.route-stage{border-right:1px solid var(--ink);border-bottom:none}
+																																																																																																																																						.route-stage:last-child{border-bottom:1px solid var(--ink)}
+																																																																																																																																							.pillars{grid-template-columns:1fr;gap:20px}
+																																																																																																																																								.three-col{grid-template-columns:1fr;gap:20px}
+																																																																																																																																									.doctrine{grid-template-columns:1fr;gap:32px}
+																																																																																																																																										.doctrine .pull{font-size:24px;padding-left:20px}
+																																																																																																																																											.keywords .grid{grid-template-columns:1fr}
+																																																																																																																																												.afterglow{padding:32px 28px}
+																																																																																																																																													.afterglow .feels{grid-template-columns:1fr;gap:0}
+																																																																																																																																														.usp-table{grid-template-columns:1fr}
+																																																																																																																																															.usp-cell{border-right:none}
+																																																																																																																																																.section-head{grid-template-columns:80px 1fr;gap:24px}
+																																																																																																																																																	.section-num{font-size:44px}
+																																																																																																																																																		.section-title{font-size:24px}
+																																																																																																																																																			.crossing{display:none}
+																																																																																																																																																			}
+																																																																																																																																																			@media print{
+																																																																																																																																																				body{background:#fff}
+																																																																																																																																																					.sheet{padding:24px}
+																																																																																																																																																						.section{page-break-inside:avoid}
+																																																																																																																																																						}
+																																																																																																																																																					</style>
+																																																																																																																																																				</head>
+																																																																																																																																																				<body>
+																																																																																																																																																					<div class="sheet">
+																																																																																																																																																						
+																																																																																																																																																						<!-- TOP BAR -->
+																																																																																																																																																						<div class="topbar">
+																																																																																																																																																							<div class="left">
+																																																																																																																																																								<span class="dot"></span>
+																																																																																																																																																								<span>Concept Sheet</span>
+																																																																																																																																																								<span>Taro × You Gohan</span>
+																																																																																																																																																							</div>
+																																																																																																																																																							<div class="right">
+																																																																																																																																																								<span>Non-fiction Cross-Cultural Variety</span>
+																																																																																																																																																								<span>v2.0 / 2026</span>
+																																																																																																																																																							</div>
+																																																																																																																																																						</div>
+																																																																																																																																																						
+																																																																																																																																																						<!-- DECORATIVE CROSSING -->
+																																																																																																																																																						<svg class="crossing" viewBox="0 0 80 80">
+																																																																																																																																																						<line x1="0" y1="40" x2="80" y2="40"/>
+																																																																																																																																																						<line x1="40" y1="0" x2="40" y2="80"/>
+																																																																																																																																																						<line class="accent" x1="10" y1="10" x2="70" y2="70"/>
+																																																																																																																																																						<line class="accent" x1="70" y1="10" x2="10" y2="70"/>
+																																																																																																																																																						<circle cx="40" cy="40" r="3"/>
+																																																																																																																																																						</svg>
+																																																																																																																																																						
+																																																																																																																																																						<!-- HERO -->
+																																																																																																																																																						<section class="hero">
+																																																																																																																																																							<div class="kicker">YouTube Original / Tokyo, Earth</div>
+																																																																																																																																																							<h1>タロウと<span class="x">×</span>Youごはん</h1>
+																																																																																																																																																							<div class="subtitle-en">Strangers in a crossing become friends — over a meal, over a wish, over the time we happen to share.</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="soul">
+																																																																																																																																																								<div class="label">— Channel Soul</div>
+																																																																																																																																																								<div class="body">
+																																																																																																																																																									<span class="ja-em">「さよなら」</span>なんて言わない。<br>
+																																																																																																																																																									僕らは <em>同じ地球線</em> の上にいる。<br><br>
+																																																																																																																																																									渋谷の雑踏で、偶然目が合った ── その一瞬がなければ、一生交わらなかったかもしれない人生。形式的な観光案内ではなく、心を通わせる「食事」と「体験」を通じて、他人だった僕らが「友達」に変わる。境界線が溶け、世界が少しだけ優しくなる瞬間を届けるノンフィクション・バラエティ。
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="taglines">
+																																																																																																																																																								<div class="label">— Tagline / 一句化候補プール</div>
+																																																																																																																																																								<ul>
+																																																																																																																																																									<li class="lead"><span class="num">01</span>食を超えて、日本を一緒に生きる。</li>
+																																																																																																																																																									<li><span class="num">02</span>偶然出会った友達に、最高の日本体験を。</li>
+																																																																																																																																																									<li><span class="num">03</span>世界線が交わる、日本体験。</li>
+																																																																																																																																																									<li><span class="num">04</span>一期一会を、思い出で終わらせない。</li>
+																																																																																																																																																									<li><span class="num">05</span>旅人を、"友達"としてもてなす。</li>
+																																																																																																																																																									<li class="en"><span class="num">06</span>Good food, good friends, good memories.</li>
+																																																																																																																																																								</ul>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 01 / REDEFINITION -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">01</div>
+																																																																																																																																																								<div class="section-title">番組の本質 — 何の番組ではないのか<span class="en">The Redefinition / What This Show Is Not</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="redef">
+																																																																																																																																																								<div class="negation">
+																																																																																																																																																									<h3>これは "日本食を食べてもらう番組" ではない。</h3>
+																																																																																																																																																									<p>外国人ゲストに日本食をリアクションしてもらうグルメ紹介、海外の人に日本のすごさを語らせる啓蒙番組、観光地を案内する旅番組 ── そのいずれでもない。"食わせて驚かせる"構造に依存しない。</p>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="affirmation">
+																																																																																																																																																									<h3>これは <span class="em">"友達になった人の、日本でやりたかったことを叶える"</span> 番組である。</h3>
+																																																																																																																																																									<p>本質は、偶然出会った旅人や、再会した海外の友達と、彼らが「本当に体験したかった日本」を全力で実現すること。その時間の中で <strong>食・街・人・会話・文化・空気感・偶然</strong> が自然に共有されていく。食はそのうちのひとつにすぎない。</p>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="redef-pull">
+																																																																																																																																																								食は、<span class="em">目的</span>であり、<span class="em">手段</span>でもある。<br>
+																																																																																																																																																								同じテーブルを囲み、感情を共有し、文化を理解し合うための、最強のコミュニケーション装置。
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 02 / WORLDVIEW -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">02</div>
+																																																																																																																																																								<div class="section-title">世界観 — 出会いという奇跡<span class="en">Worldview / The Miracle of Crossing</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="worldview">
+																																																																																																																																																								<div class="principles">
+																																																																																																																																																									<div class="principle">
+																																																																																																																																																										<h4>偶然が、必然になる場所</h4>
+																																																																																																																																																										<p>大きな地球の、東京の、渋谷という一点。今日その時間にその交差点にいた、という偶然。声をかけるという、この企画でしか起きない偶然性。そのアトランダムな好奇心が本編を成立させる。</p>
+																																																																																																																																																									</div>
+																																																																																																																																																									<div class="principle">
+																																																																																																																																																										<h4>違いを語らず、共感を分かち合う</h4>
+																																																																																																																																																										<p>「日本 vs 海外」の比較バラエティではない。世界の人々と友達になり、互いを理解することで世界がもっと楽しくなる、という静かな確信を全編に通す。差を強調するのではなく、笑い合えた事実を映す。</p>
+																																																																																																																																																									</div>
+																																																																																																																																																									<div class="principle">
+																																																																																																																																																										<h4>境界線が溶ける瞬間を映す</h4>
+																																																																																																																																																										<p>言葉、文化、国籍、距離 ── 当たり前にあるはずの境界線が、食卓を囲んでいるうちにふと溶けてなくなる、その一秒を捕まえる。これが本チャンネルが世界に提供できる、唯一無二の瞬間。</p>
+																																																																																																																																																									</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								
+																																																																																																																																																								<div class="song">
+																																																																																																																																																									<div class="label">Theme Song / 世界観の核</div>
+																																																																																																																																																									<div class="ja">
+																																																																																																																																																										偶然は必然なのかな<br>
+																																																																																																																																																										突然生まれ消えゆく未来線<br>
+																																																																																																																																																										心のドアを開け放てば<br>
+																																																																																																																																																										それは小さな奇跡になるんだ<br><br>
+																																																																																																																																																										街の真ん中のCrossing<br>
+																																																																																																																																																										偶然が生み出すStory<br>
+																																																																																																																																																										一期一会のこの世界で<br>
+																																																																																																																																																										大事なことはただひとつ
+																																																																																																																																																									</div>
+																																																																																																																																																									<div class="en">
+																																																																																																																																																										Good food, good friends, good smile —<br>
+																																																																																																																																																										that's how the world should be.<br>
+																																																																																																																																																										Your lines, my lines intertwine,<br>
+																																																																																																																																																										growing into one big circle.<br>
+																																																																																																																																																										We don't need to say goodbye.<br>
+																																																																																																																																																										We are on the same Earth line.
+																																																																																																																																																									</div>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 03 / GOLDEN ROUTE -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">03</div>
+																																																																																																																																																								<div class="section-title">番組の流れ — Golden Route<span class="en">The 7 Stages of a Single Episode</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="route">
+																																																																																																																																																								<div class="route-line"></div>
+																																																																																																																																																								<div class="route-grid">
+																																																																																																																																																									<div class="step"><div class="pin"></div><div class="num">01</div><h4>出会う</h4><div class="en">Meet</div></div>
+																																																																																																																																																									<div class="step"><div class="pin"></div><div class="num">02</div><h4>夢を聞く</h4><div class="en">Listen</div></div>
+																																																																																																																																																									<div class="step"><div class="pin"></div><div class="num">03</div><h4>叶える</h4><div class="en">Fulfill</div></div>
+																																																																																																																																																									<div class="step"><div class="pin"></div><div class="num">04</div><h4>一緒に感動する</h4><div class="en">Feel together</div></div>
+																																																																																																																																																									<div class="step"><div class="pin"></div><div class="num">05</div><h4>語り合う</h4><div class="en">Share</div></div>
+																																																																																																																																																									<div class="step"><div class="pin"></div><div class="num">06</div><h4>友達になる</h4><div class="en">Become friends</div></div>
+																																																																																																																																																									<div class="step"><div class="pin"></div><div class="num">07</div><h4>再会を願う</h4><div class="en">Until next time</div></div>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="route-stages">
+																																																																																																																																																								<div class="route-stage">
+																																																																																																																																																									<div class="num">I</div>
+																																																																																																																																																									<h5>街の鼓動と偶然の始まり</h5>
+																																																																																																																																																									<p>どの街か明示。タロウさんの今日の気持ちを視聴者にシェア。声がけは企画の心臓部 ── 偶然性をあえて隠さず映す。</p>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="route-stage">
+																																																																																																																																																									<div class="num">II</div>
+																																																																																																																																																									<h5>共鳴するゲスト</h5>
+																																																																																																																																																									<p>日本食に独自の視点や熱量を持つ1〜3名。「おまかせ」「コンビニ」のテンプレ観光を超えた、深い興味の持ち主に絞る。</p>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="route-stage">
+																																																																																																																																																									<div class="num">III</div>
+																																																																																																																																																									<h5>友達として過ごす本編</h5>
+																																																																																																																																																									<p>撮影を忘れさせる配慮。食べるタイミングも演出ではなく会話の流れで。自国文化との対比は「お喋り」の中で自然に。</p>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="route-stage">
+																																																																																																																																																									<div class="num">IV</div>
+																																																																																																																																																									<h5>地球線がつながるエンディング</h5>
+																																																																																																																																																									<p>再会を確信させるエモーショナルな締め。+ チームの振り返り（「あの子、最高だったね」） ── 視聴者が"仲間"になる瞬間。</p>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 04 / THREE PILLARS -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">04</div>
+																																																																																																																																																								<div class="section-title">三本柱 — この番組を成立させる構造的な軸<span class="en">The Three Pillars</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="pillars">
+																																																																																																																																																								<!-- Pillar 1: Food -->
+																																																																																																																																																								<div class="pillar">
+																																																																																																																																																									<div class="pillar-num">I</div>
+																																																																																																																																																									<div class="pillar-label">Pillar I</div>
+																																																																																																																																																									<h4>食の位置づけ<span class="en">Food as Communication Device</span></h4>
+																																																																																																																																																									<div class="pillar-thesis">食は単なるグルメ紹介ではなく、<em>感情と文化を共有する装置</em>である。</div>
+																																																																																																																																																									<div class="pillar-body">
+																																																																																																																																																										番組では料理だけではなく、<strong>なぜ日本でそれを体験したかったのか</strong>、どんな憧れがあったのか、自国との違い、文化背景、日本で感じた感情まで自然に掘り下げる。料理が出てきたら、レビューではなく対話が始まる。
+																																																																																																																																																									</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								
+																																																																																																																																																								<!-- Pillar 2: Japan Experience -->
+																																																																																																																																																								<div class="pillar">
+																																																																																																																																																									<div class="pillar-num">II</div>
+																																																																																																																																																									<div class="pillar-label">Pillar II</div>
+																																																																																																																																																									<h4>"日本体験"の定義<span class="en">Memory, Not Tourism</span></h4>
+																																																																																																																																																									<div class="pillar-thesis">目指すのは観光ではなく、<em>人生の記憶に残る体験</em>。</div>
+																																																																																																																																																									<div class="pillar-body">
+																																																																																																																																																										外国人向けアクティビティ紹介ではない。<strong>「日本でしか味わえない空気」</strong>を共有することがゴール。日本人でもテンションが上がるレベルの本物を選び、場所・時間・空気感ごと味わってもらう。
+																																																																																																																																																									</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								
+																																																																																																																																																								<!-- Pillar 3: Reunion -->
+																																																																																																																																																								<div class="pillar">
+																																																																																																																																																									<div class="pillar-num">III</div>
+																																																																																																																																																									<div class="pillar-label">Pillar III</div>
+																																																																																																																																																									<h4>再会の哲学<span class="en">The Reunion as Proof</span></h4>
+																																																																																																																																																									<div class="pillar-thesis">"一期一会"で終わらせない。<em>再会こそが本物だった証明</em>。</div>
+																																																																																																																																																									<div class="pillar-body">
+																																																																																																																																																										再び日本に来てくれた友達、前回出会ったゲスト、家族を連れて戻ってきた人 ── そうした<strong>再会回</strong>を継続的に組み込むことで、「あの時間は本物だった」が視聴者の前で証明される。番組が単発の出会いの集積ではなく、<strong>続いていく物語</strong>になる。
+																																																																																																																																																									</div>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="experience-tags">
+																																																																																																																																																								<div class="label">— "日本でしか味わえない空気" の素材リスト</div>
+																																																																																																																																																								<div class="tags">
+																																																																																																																																																									<span class="tag flame">憧れの寿司店</span>
+																																																																																																																																																									<span class="tag flame">本気の焼肉</span>
+																																																																																																																																																									<span class="tag">深夜の居酒屋</span>
+																																																																																																																																																									<span class="tag">日本酒文化</span>
+																																																																																																																																																									<span class="tag">地元の名店</span>
+																																																																																																																																																									<span class="tag">四季</span>
+																																																																																																																																																									<span class="tag">商店街</span>
+																																																																																																																																																									<span class="tag">温泉</span>
+																																																																																																																																																									<span class="tag">花見</span>
+																																																																																																																																																									<span class="tag">屋台</span>
+																																																																																																																																																									<span class="tag">地方文化</span>
+																																																																																																																																																									<span class="tag">日本人の日常</span>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 05 / GUEST · EXPERIENCE · TEAM -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">05</div>
+																																																																																																																																																								<div class="section-title">出演・体験・チームの原則<span class="en">Casting · Experience · Hosts</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="three-col">
+																																																																																																																																																								<div class="card">
+																																																																																																																																																									<div class="num">01</div>
+																																																																																																																																																									<h4>ゲスト要件</h4>
+																																																																																																																																																									<div class="en-h4">The right guest</div>
+																																																																																																																																																									<ul>
+																																																																																																																																																										<li>こちらから求めずとも、日本食への興味を自発的に話す人</li>
+																																																																																																																																																										<li>日本食に独自の視点・熱量を持つ表現力ある人</li>
+																																																																																																																																																										<li>原則 1〜3名</li>
+																																																																																																																																																										<li>ラーメン／コンビニ／おまかせなど、観光どまりの興味は原則お断り</li>
+																																																																																																																																																									</ul>
+																																																																																																																																																								</div>
+																																																																																																																																																								
+																																																																																																																																																								<div class="card">
+																																																																																																																																																									<div class="num">02</div>
+																																																																																																																																																									<h4>店・体験の選び方</h4>
+																																																																																																																																																									<div class="en-h4">The wish, fulfilled</div>
+																																																																																																																																																									<ul>
+																																																																																																																																																										<li>ゲストが希望したことを全力で実現する</li>
+																																																																																																																																																										<li>食以外の「外国人向け体験サービス」は原則含まない</li>
+																																																																																																																																																										<li>日本人でもテンションが上がるレベルの本物を選ぶ</li>
+																																																																																																																																																										<li>「願いの解像度」が低ければ、Stage II で深く聞き直す</li>
+																																																																																																																																																									</ul>
+																																																																																																																																																								</div>
+																																																																																																																																																								
+																																																																																																																																																								<div class="card flame">
+																																																																																																																																																									<div class="num">03</div>
+																																																																																																																																																									<h4>ホスト・チーム像</h4>
+																																																																																																																																																									<div class="en-h4">Hosts, not presenters</div>
+																																																																																																																																																									<ul>
+																																																																																																																																																										<li>"案内人"ではなく、"日本を全力で紹介したい友達"</li>
+																																																																																																																																																										<li>接客でも MC でもテレビ司会でもなく、"同じ時間を楽しむ人"</li>
+																																																																																																																																																										<li>カメラマンも"画の外"ではなく、友達の一員</li>
+																																																																																																																																																										<li>振り返りでチームの素顔とパーソナリティを等身大に</li>
+																																																																																																																																																									</ul>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 06 / DOCTRINE -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">06</div>
+																																																																																																																																																								<div class="section-title">演出ドクトリン — 撮影を意識させない<span class="en">Production Doctrine / Our Strongest Weapon</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="doctrine">
+																																																																																																																																																								<div class="pull">
+																																																																																																																																																									撮影を、<span class="em">撮影と感じさせない。</span><br>
+																																																																																																																																																									友達と食べてるだけ、に見せきる。
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="body">
+																																																																																																																																																									<p>本編の演出方針は明確である。<strong>カメラマンも含めて、友達同士で食事をしているように自然に見せる。</strong>ゲストには撮影であることを意識させないよう細やかに気を配り、リラックスした状態を保ってもらう。これが本チャンネル最大の強みであり、ゲストの口から自然にこぼれ落ちる言葉こそが、他のどの番組にも作れない瞬間になる。</p>
+																																																																																																																																																									<p>食べ始めるタイミングや会話の節目は「一応撮影だから」程度の自然な流れで導入し、<strong>"撮影的進行"はしない。</strong>カット割を意識させる演出、台本臭、テロップ前提の発言誘導 ── すべて避ける。本物のリアクションは、楽しい時間の副産物としてのみ生まれる。</p>
+																																																																																																																																																									<div class="note">
+																																																																																																																																																										逆説的に、「撮影として完璧な瞬間」を狙うほど、この番組の魅力は失われる。チームが"友達としていい時間を過ごすこと"だけに集中するとき、結果として最高の素材が手に入る ── これが本チャンネルの編集方針の前提でもある。
+																																																																																																																																																									</div>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="keywords">
+																																																																																																																																																								<div class="label">— 編集・現場で立ち戻るキーワード</div>
+																																																																																																																																																								<div class="grid">
+																																																																																																																																																									<div class="kw">
+																																																																																																																																																										<h5>ノンフィクション<span class="en">Non-fiction</span></h5>
+																																																																																																																																																										<p>予定調和を嫌う。台本通りに進んでしまった瞬間は使わない。"今ここ"でしか起きなかったことだけを編集に残す。</p>
+																																																																																																																																																									</div>
+																																																																																																																																																									<div class="kw">
+																																																																																																																																																										<h5>擬似インタラクティブ<span class="en">Pseudo-interactive</span></h5>
+																																																																																																																																																										<p>視聴者を置いてけぼりにせず、一緒に歩いている感覚。タロウさんの語りかけは"番組ぽい仕掛け"ではなく、視聴者への口語。</p>
+																																																																																																																																																									</div>
+																																																																																																																																																									<div class="kw">
+																																																																																																																																																										<h5>Crossing<span class="en">Where lines meet</span></h5>
+																																																																																																																																																										<p>異なる文化が交わり、新しい色が生まれる瞬間を逃さない。差ではなく、混ざった時に何が起きたかを撮る。</p>
+																																																																																																																																																									</div>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 07 / EMOTIONAL DESIGN / 余韻 -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">07</div>
+																																																																																																																																																								<div class="section-title">視聴者の余韻 — 感情設計<span class="en">Emotional Design / The Afterglow</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="afterglow">
+																																																																																																																																																								<div class="pre-label">— 視聴後に残ってほしい感情</div>
+																																																																																																																																																								<div class="lead">
+																																																																																																																																																									「美味しそう」「面白い」「日本すごい」── そこ<em>だけ</em>で終わらせない。<br>
+																																																																																																																																																									最終的に目指すのは、もう一段深い余韻。
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="feels">
+																																																																																																																																																									<div class="feel"><span class="quote">"</span>世界って、思ったより近い。</div>
+																																																																																																																																																									<div class="feel"><span class="quote">"</span>人って、結構わかり合える。</div>
+																																																																																																																																																									<div class="feel"><span class="quote">"</span>旅って、いいな。</div>
+																																																																																																																																																									<div class="feel"><span class="quote">"</span>こんな出会い、羨ましいな。</div>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- 08 / USP -->
+																																																																																																																																																						<section class="section">
+																																																																																																																																																							<div class="section-head">
+																																																																																																																																																								<div class="section-num">08</div>
+																																																																																																																																																								<div class="section-title">差別化 — 他のチャンネルと何が違うのか<span class="en">USP / What Sets Us Apart</span></div>
+																																																																																																																																																							</div>
+																																																																																																																																																							
+																																																																																																																																																							<div class="usp-table">
+																																																																																																																																																								<div class="usp-row">
+																																																																																																																																																									<div class="usp-cell head">項目 / Dimension</div>
+																																																																																																																																																									<div class="usp-cell head">よくある外国人系チャンネル</div>
+																																																																																																																																																									<div class="usp-cell head us">タロウとYouごはん</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="usp-row">
+																																																																																																																																																									<div class="usp-cell dim cat">スタンス</div>
+																																																																																																																																																									<div class="usp-cell them">ガイドと観光客の関係。案内人 / 案内される人。</div>
+																																																																																																																																																									<div class="usp-cell us"><strong>新しい友達同士</strong>の関係。同じ時間を楽しむ仲間。</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="usp-row">
+																																																																																																																																																									<div class="usp-cell dim cat">ゲスト選定</div>
+																																																																																																																																																									<div class="usp-cell them">受動的な人でも企画は成立する。リアクションが取れれば OK。</div>
+																																																																																																																																																									<div class="usp-cell us"><strong>自発的な好奇心と表現力</strong>を持つ人だけを引き寄せる。</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="usp-row">
+																																																																																																																																																									<div class="usp-cell dim cat">撮影スタイル</div>
+																																																																																																																																																									<div class="usp-cell them">「今から撮ります」の壁がある。台本・進行・演者意識。</div>
+																																																																																																																																																									<div class="usp-cell us"><strong>カメラマン含め全員で楽しむ</strong>空気感。撮影壁の不在。</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="usp-row">
+																																																																																																																																																									<div class="usp-cell dim cat">食の扱い</div>
+																																																																																																																																																									<div class="usp-cell them">食そのものが目的。リアクションで終わる。</div>
+																																																																																																																																																									<div class="usp-cell us">食は<strong>感情と文化を共有するための装置</strong>。会話が主役。</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="usp-row">
+																																																																																																																																																									<div class="usp-cell dim cat">時間軸</div>
+																																																																																																																																																									<div class="usp-cell them">一回きりの一期一会。撮影が終われば関係も終わる。</div>
+																																																																																																																																																									<div class="usp-cell us"><strong>再会まで含めて番組</strong>。物語が続いていく。</div>
+																																																																																																																																																								</div>
+																																																																																																																																																								<div class="usp-row">
+																																																																																																																																																									<div class="usp-cell dim cat">アフタートーク</div>
+																																																																																																																																																									<div class="usp-cell them">なし、または尺埋め。</div>
+																																																																																																																																																									<div class="usp-cell us">チームの<strong>等身大の感情を共有</strong>し、視聴者がファン（仲間）になる場所。</div>
+																																																																																																																																																								</div>
+																																																																																																																																																							</div>
+																																																																																																																																																						</section>
+																																																																																																																																																						
+																																																																																																																																																						<!-- CLOSING -->
+																																																																																																																																																						<div class="closing">
+																																																																																																																																																							<div class="label">— Signature</div>
+																																																																																																																																																							<div class="en-line">We are on the same Earth line.</div>
+																																																																																																																																																							<div class="ja-line">「さよなら」なんて言わないよ。違いを語る必要なんてない。</div>
+																																																																																																																																																							<div class="signoff">Taro × You Gohan / Concept Sheet v2.0</div>
+																																																																																																																																																						</div>
+																																																																																																																																																						
+																																																																																																																																																					</div>
+																																																																																																																																																				</body>
+																																																																																																																																																			</html>
